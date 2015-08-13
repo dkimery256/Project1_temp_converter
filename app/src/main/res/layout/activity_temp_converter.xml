@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".TempConverterActivity"
+    android:background="@color/blue">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/fahrenheitEditTextBox"
+        android:layout_marginTop="39dp"
+        android:layout_below="@+id/fButton"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fahrenheit_label"
+        android:id="@+id/fahrenheitTextLabel"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_above="@+id/celsiusLabel"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/degrees_label"
+        android:id="@+id/degreesLabel"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/fButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/celsius_label"
+        android:id="@+id/celsiusLabel"
+        android:layout_below="@+id/fahrenheitEditTextBox"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="72dp"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/celsiusView"
+        android:layout_alignBottom="@+id/celsiusLabel"
+        android:layout_alignStart="@+id/fahrenheitEditTextBox"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="@string/celsius_view"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/f_button"
+        android:id="@+id/fButton"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/cButton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/c_button"
+        android:id="@+id/cButton"
+        android:layout_alignTop="@+id/fButton"
+        android:layout_alignEnd="@+id/fahrenheitEditTextBox" />
+
+</RelativeLayout>
