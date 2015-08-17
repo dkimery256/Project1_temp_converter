@@ -9,12 +9,12 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
+        android:inputType="numberSigned"
         android:ems="10"
         android:id="@+id/fahrenheitEditTextBox"
         android:layout_marginTop="39dp"
         android:layout_below="@+id/fButton"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -51,11 +51,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/celsiusView"
-        android:layout_alignBottom="@+id/celsiusLabel"
-        android:layout_alignStart="@+id/fahrenheitEditTextBox"
-        android:textSize="18sp"
+        android:textSize="75sp"
         android:textStyle="bold"
-        android:text="@string/celsius_view"/>
+        android:text="@string/celsius_view"
+        android:textColor="#3de330"
+        android:layout_below="@+id/celsiusLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="71dp" />
 
     <Button
         android:layout_width="wrap_content"

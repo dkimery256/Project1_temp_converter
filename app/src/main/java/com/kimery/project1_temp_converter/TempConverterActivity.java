@@ -1,6 +1,5 @@
 package com.kimery.project1_temp_converter;
 
-
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
@@ -11,9 +10,7 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import java.text.DecimalFormat;
-
 
 public class TempConverterActivity extends AppCompatActivity
             implements TextView.OnEditorActionListener, View.OnClickListener
@@ -86,13 +83,13 @@ public class TempConverterActivity extends AppCompatActivity
             fahrenheitEditString = fahrenheitEditTextBox.getText().toString();
             Float fahrenheit;
             Float celsius;
-            final String DEGREE = "\u2103";
+            final String DEGREE = "Â°";
             if (fahrenheitEditString.equals("")) {
                 fahrenheit = 32f;
             } else {
                 fahrenheit = Float.parseFloat(fahrenheitEditString);
             }
-            DecimalFormat dec = new DecimalFormat("#0.000");
+            DecimalFormat dec = new DecimalFormat("#0.00");
             celsius = ((fahrenheit - 32) * 5) / 9;
             celsiusView.setText(dec.format(celsius) + DEGREE);
         }
@@ -101,14 +98,13 @@ public class TempConverterActivity extends AppCompatActivity
             celsiusEditString = fahrenheitEditTextBox.getText().toString();
             Float fahrenheit;
             Float celsius;
-            final String DEGREE = "\u2109";
-            //(°C) × 9/5 + 32
+            final String DEGREE = "Â°";
             if (celsiusEditString.equals("")) {
                 celsius = 0f;
             } else {
                 celsius = Float.parseFloat(celsiusEditString);
             }
-            DecimalFormat dec = new DecimalFormat("#0.000");
+            DecimalFormat dec = new DecimalFormat("#0.00");
             fahrenheit = (celsius * 9/5) + 32;
             celsiusView.setText(dec.format(fahrenheit) + DEGREE);
         }
@@ -116,19 +112,21 @@ public class TempConverterActivity extends AppCompatActivity
 
     @Override
     public void onClick(View v) {
-        final String DEGREE = "\u00B0";
+        //final String DEGREE = "\u00B0";
         switch (v.getId()) {
             case R.id.fButton:
                 fahrenheitTextLabel.setText("Celsius:");
                 celsiusLabel.setText("Fahrenheit:");
-                celsiusView.setText("0.000" + DEGREE);
-                fahrenheitEditTextBox.setText("");
+                calculateDegrees();
+                //celsiusView.setText("0.000" + DEGREE);
+                //fahrenheitEditTextBox.setText("");
                 break;
             case R.id.cButton:
                 fahrenheitTextLabel.setText("Fahrenheit:");
                 celsiusLabel.setText("Celsius:");
-                celsiusView.setText("0.000"+DEGREE);
-                fahrenheitEditTextBox.setText("");
+                calculateDegrees();
+                //celsiusView.setText("0.000"+DEGREE);
+                //fahrenheitEditTextBox.setText("");
                 break;
         }
     }

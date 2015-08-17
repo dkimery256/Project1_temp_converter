@@ -5,9 +5,10 @@
     <string name="degrees_label">Degrees</string>
     <string name="fahrenheit_label">Fahrenheit:</string>
     <string name="celsius_label">Celsius:</string>
-    <string name="celsius_view">0.000</string>
+    <string name="celsius_view">0.00°</string>
     <string name="f_button">F</string>
     <string name="c_button">C</string>
     <color name="blue">#0099FF</color>
+    <color name="black">#000000</color>
 
 </resources>
