@@ -1,7 +1,8 @@
 package com.kimery.project1_temp_converter;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+//import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,7 +13,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import java.text.DecimalFormat;
 
-public class TempConverterActivity extends AppCompatActivity
+public class TempConverterActivity extends Activity
             implements TextView.OnEditorActionListener, View.OnClickListener
 
 {
